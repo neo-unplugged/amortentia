@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Chapters Index</title>{% endblock %}
+{% block page_specific_css %}
+<link rel="stylesheet" href="{% static 'custom/chapters_index.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main-content">
+
+    <div class="chapter-title">Physics Index</div>
+
+    <!-- Chapter 1: Introduction to Physics -->
+    <div class="heading">Chapter 1: Introduction to Physics</div>
+    <ul>
+        <li><a href="#">Topic 1.1: Mechanics</a>
+            <ul>
+                <li><a href="#">Sub-topic 1.1.1: Newton's Laws of Motion</a></li>
+                <li><a href="#">Sub-topic 1.1.2: Work and Energy</a></li>
+                <li><a href="#">Sub-topic 1.1.3: Kinematics</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Topic 1.2: Thermodynamics</a>
+            <ul>
+                <li><a href="#">Sub-topic 1.2.1: Laws of Thermodynamics</a></li>
+                <li><a href="#">Sub-topic 1.2.2: Heat and Temperature</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Topic 1.3: Electromagnetism</a>
+            <ul>
+                <li><a href="#">Sub-topic 1.3.1: Electric Fields</a></li>
+                <li><a href="#">Sub-topic 1.3.2: Magnetic Fields</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Chapter 2: Quantum Mechanics -->
+    <div class="heading">Chapter 2: Quantum Mechanics</div>
+    <ul>
+        <li><a href="#">Topic 2.1: Wave-Particle Duality</a>
+            <ul>
+                <li><a href="#">Sub-topic 2.1.1: Heisenberg Uncertainty Principle</a></li>
+                <li><a href="#">Sub-topic 2.1.2: De Broglie Hypothesis</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Topic 2.2: Schrödinger Equation</a>
+            <ul>
+                <li><a href="#">Sub-topic 2.2.1: Time-Dependent Schrödinger Equation</a></li>
+                <li><a href="#">Sub-topic 2.2.2: Time-Independent Schrödinger Equation</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Chapter 3: Relativity -->
+    <div class="heading">Chapter 3: Relativity</div>
+    <ul>
+        <li><a href="#">Topic 3.1: Special Relativity</a>
+            <ul>
+                <li><a href="#">Sub-topic 3.1.1: Lorentz Transformations</a></li>
+                <li><a href="#">Sub-topic 3.1.2: Time Dilation and Length Contraction</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Topic 3.2: General Relativity</a>
+            <ul>
+                <li><a href="#">Sub-topic 3.2.1: Curvature of Spacetime</a></li>
+                <li><a href="#">Sub-topic 3.2.2: Black Holes</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+{% endblock %}

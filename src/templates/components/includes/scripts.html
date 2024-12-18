@@ -1,0 +1,10 @@
+{% load static %}
+
+<!-- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js -->
+<script type="text/javascript" async id="MathJax-script" src="{% static 'js/tex-mml-chtml.js' %}"></script>
+<script>
+    MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+        svg: { fontCache: 'global' }
+    };
+</script>

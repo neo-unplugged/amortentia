@@ -1,0 +1,163 @@
+/* Main Content Styles */
+.main-content {
+    max-width: 800px;
+    /* Limit the width */
+    margin: 0 auto;
+    /* Center horizontally */
+    background-color: white;
+    /* Add a background to make it pop */
+    border-radius: 10px;
+    /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 80px 20px 40px;
+    /* Add padding-bottom for spacing */
+    /* Combines padding-top, padding-left, and padding-right */
+}
+
+/* Chapter Titles and Headings */
+.chapter-title,
+.heading {
+    font-weight: bold;
+    color: #333;
+    /* Dark color for contrast */
+    margin-top: 20px;
+    /* Add spacing */
+}
+
+/* Specific styles for chapter titles */
+.chapter-title {
+    font-size: 2em;
+    /* Larger font size for chapter titles */
+}
+
+/* Specific styles for headings */
+.heading {
+    font-size: 1.5em;
+    /* Smaller font size specifically for headings */
+    margin-top: 10px;
+    /* Adjusted spacing for headings */
+}
+
+/* Chapter Links */
+.chapter-title a,
+.heading a {
+    text-decoration: none;
+    /* Remove underlines */
+    color: #4CAF50;
+    /* Green for visibility */
+    font-weight: bold;
+    /* Bold text */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    /* Smooth hover transition */
+}
+
+.chapter-title a:hover,
+.heading a:hover {
+    color: #2e7d32;
+    /* Darker green on hover */
+}
+
+/* Topics and Subtopics */
+ul li a {
+    text-decoration: none;
+    /* No underlines */
+    color: #555;
+    /* Default color for topics */
+    font-size: 1.2em;
+    /* Slightly larger font size */
+    margin: 4px 0;
+    /* Spacing for better readability */
+    display: inline-block;
+    /* Inline-block layout */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    /* Smooth hover transition */
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+    color: #007bff;
+    /* Blue on hover */
+}
+
+/* Subtopics */
+ul li ul li a {
+    color: #555;
+    /* Darker color for better readability */
+    font-size: 1em;
+    /* Slightly smaller font size */
+    transition: color 0.3s ease;
+    /* Smooth hover transition */
+}
+
+ul li ul li a:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Adjust List Spacing */
+ul {
+    margin: 10px 0;
+    padding: 0 20px;
+    /* Indent slightly for subtopics */
+}
+
+/* Improve Subtopic Readability */
+ul li ul li a {
+    font-size: 0.9em;
+    /* Reduce font size for subtopics */
+}
+
+/* Highlight Links on Small Screens */
+ul li a {
+    font-size: 1.1em;
+    /* Increase font size slightly */
+    line-height: 1.5em;
+    /* Improve readability */
+}
+
+/* Reduce Footer Size on Small Screens */
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.8em;
+        /* Smaller text */
+        padding: 10px;
+        /* Less padding */
+    }
+}
+
+/* Ensure Content Stays Centered on Small Screens */
+@media (max-width: 600px) {
+    .main-content {
+        width: 100%;
+        /* Use most of the screen width */
+        padding: 0px 15px;
+
+        /* Reduce padding */
+    }
+
+    .chapter-title {
+        text-align: center;
+        /* Center align chapter title */
+        font-size: 1.8em;
+        /* Slightly smaller font size */
+    }
+
+    .heading {
+        text-align: center;
+        /* Center align headings */
+        font-size: 1.4em;
+        /* Adjust font size */
+    }
+
+    ul {
+        padding-left: 0;
+        /* Remove default left padding */
+    }
+
+    ul li {
+        list-style: none;
+        /* Remove bullets for a cleaner look */
+    }
+}

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Topic Detail</title>{% endblock %}
+{% block page_specific_css %}
+<link rel="stylesheet" href="{% static 'custom/topic_detail.css' %}">
+{% endblock %}
+{% block content %}
+
+<div class="main-content">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Chapter 1</a> > <a href="#">Topic 1.1</a> > <a href="#">Segment 1.1.1</a>
+    </nav>
+
+    <div class="chapter-title">Chapter 1: Introduction to Physics</div>
+
+    <div class="heading">Topic 1.1: Mechanics</div>
+
+    <!-- Top content -->
+    <div class="content-top">
+        <p>Mechanics is a branch of physics that deals with the study of motion, forces, and energy. It forms the
+            foundation of classical physics and has applications in various fields, including engineering,
+            astronomy, and everyday life.</p>
+        <p>Newton’s laws of motion provide the framework for understanding mechanics. The first law, often referred
+            to as the law of inertia, states that an object will remain at rest or in uniform motion unless acted
+            upon by a net external force. This is a crucial concept that explains how objects respond to forces and
+            the interaction between objects in motion.</p>
+        <p>For example, a ball that is kicked will continue to roll until friction or another force acts on it. This
+            fundamental concept is seen in everything from the motion of planets in space to the way we walk on
+            Earth.</p>
+    </div>
+
+    <!-- Figure with customized tooltip showing extra info -->
+    <div class="figure">
+        <p>Figure 1.1: Motion under gravity</p>
+        <div class="image-container">
+            <img src="https://via.placeholder.com/400x300.png?text=Diagram+of+Motion"
+                alt="Diagram of motion under gravity">
+            <div class="tooltip">Hover for details
+                <span class="tooltiptext">The object starts from rest, accelerates due to gravity, and slows down
+                    before hitting the ground. This is explained by the laws of motion and kinematics.</span>
+            </div>
+        </div>
+        <p>This figure shows the object's motion.</p>
+    </div>
+
+    <!-- More content before the equation -->
+    <div class="content-bottom">
+        <p>Mechanics is further divided into two subfields: kinematics and dynamics. Kinematics focuses on
+            describing motion without considering its causes, using parameters like velocity, acceleration, and
+            displacement. Dynamics examines the forces and energy responsible for motion.</p>
+        <p>One key equation in mechanics, derived from Newton's second law of motion, relates force, mass, and
+            acceleration. This equation, \(F = ma\), describes how the motion of an object changes in response to an
+            applied force. It is fundamental in understanding the motion of all objects, from falling apples to the
+            movement of vehicles.</p>
+    </div>
+
+    <!-- Equations -->
+    <div class="equation">
+        <p>\(\text{E} = mc^2\)</p>
+    </div>
+    <div class="equation">
+        <p>\(\text{F} = ma\)</p>
+    </div>
+    <div class="equation">
+        <p>\(\text{a} = \frac{\Delta v}{\Delta t}\)</p>
+    </div>
+
+    <!-- More content after the equation -->
+    <div class="content-bottom">
+        <p>Understanding these basic equations allows us to predict the motion of objects in a wide variety of
+            situations. For example, by knowing the mass of an object and the forces acting on it, we can calculate
+            its acceleration and predict its future motion. This is crucial in engineering, where precise control of
+            motion is required, such as in the design of cars, airplanes, and machinery.</p>
+        <p>The study of mechanics also leads to a deeper understanding of energy and its conservation. In many
+            physical processes, energy is neither created nor destroyed but transformed from one form to another.
+            This principle is encapsulated in the law of conservation of energy, which plays a fundamental role in
+            many areas of physics.</p>
+    </div>
+
+    <!-- Explanatory block -->
+    <div class="explanatory-block">
+        <p><strong>[Explanatory (a)]</strong> The equation \(E = mc^2\) expresses the relationship between energy
+            (\(E\)) and mass (\(m\)). This is a fundamental concept in Einstein's theory of relativity. It shows
+            that mass can be converted into energy, and energy into mass. This principle is critical in
+            understanding nuclear reactions and particle physics.</p>
+    </div>
+
+    <!-- Tags -->
+    <div class="tags">
+        <a href="#" class="tag" title="Newton's Laws of Motion">Newton's Laws</a>
+        <a href="#" class="tag" title="Forces and Motion">Forces</a>
+        <a href="#" class="tag" title="Work and Energy">Work & Energy</a>
+        <a href="#" class="tag" title="Kinematics">Kinematics</a>
+    </div>
+</div>
+{% endblock %}

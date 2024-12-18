@@ -1,0 +1,7 @@
+local-cdn
+cdn
+pyenv
+node_modules
+.vercel
+__pycache__
+db.sqlite3

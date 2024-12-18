@@ -1,0 +1,251 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+header .logo span {
+    color: #4CAF50; /* Color for Psi */
+}
+
+header .logo span.white {
+    color: white; /* Color for "Ten" */
+}
+
+header .psi-svg {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+}
+
+header .profile {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+header .profile i {
+    font-size: 2em;
+    color: white;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #555;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.chapter-title, .heading {
+    font-size: 2em; /* Larger font size for chapters */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Dark color for contrast */
+    margin-top: 30px; /* Add margin to create spacing */
+}
+
+.chapter-title {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Chapter Links */
+.chapter-title a, .heading a {
+    text-decoration: none; /* Remove underlines */
+    color: #4CAF50; /* Set color to green for visibility */
+    font-weight: bold; /* Keep bold font */
+}
+
+.chapter-title a:hover, .heading a:hover {
+    color: #2e7d32; /* Darken the green on hover */
+}
+
+/* Topics and Subtopics */
+ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #555; /* Default color for topics and subtopics */
+    font-size: 1.2em; /* Slightly larger font size */
+    margin: 5px 0; /* Add margin for better spacing */
+    display: inline-block;
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #007bff; /* Change color to blue on hover */
+}
+
+/* Subtopics (to make them distinct) */
+ul li ul li a {
+    color: #777; /* Lighter color for subtopics */
+    font-size: 1.1em; /* Slightly smaller font size */
+}
+
+ul li ul li a:hover {
+    color: #0056b3; /* Change subtopic color on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 15px;
+    font-size: 1.5em;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #4CAF50;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+@media (max-width: 480px) {
+    .figure {
+        max-width: 100%; /* Ensure full width on very small screens */
+        margin-bottom: 15px; /* Less bottom margin for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .tags {
+        flex-direction: column;
+    }
+
+    .chapter-title {
+        font-size: 1.5em;
+    }
+
+    .heading {
+        font-size: 1.2em;
+    }
+
+    .content-top {
+        font-size: 1em;
+    }
+
+    .figure {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .main-content {
+        padding-top: 120px;
+    }
+
+    .tags {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chapter-title {
+        font-size: 1.5em;
+    }
+
+    .heading {
+        font-size: 1.2em;
+    }
+
+    .content-top {
+        font-size: 1em;
+    }
+
+    .figure {
+        max-width: 100%; /* Allow the figure to expand fully on small screens */
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 20px; /* Ensure there's enough space below */
+    }
+}

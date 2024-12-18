@@ -1,0 +1,1 @@
+# Setting tailwind in django

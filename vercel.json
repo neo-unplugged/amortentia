@@ -1,0 +1,28 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "src/core/wsgi.py",
+			"use": "@vercel/python"
+		},
+		{
+			"src": "cdn/static/**/*",
+			"use": "@vercel/static"
+		}
+	],
+	"routes": [
+		{
+			"src": "/static/(.*)",
+			"dest": "/cdn/static/$1"
+		},
+		{
+			"src": "/(.*)",
+			"dest": "src/core/wsgi.py"
+		}
+	],
+	"buildCommand": "python src/manage.py collectstatic --noinput",
+	"env": {
+		"DJANGO_SETTINGS_MODULE": "core.settings",
+		"PYTHONPATH": "./src"
+	}
+}
