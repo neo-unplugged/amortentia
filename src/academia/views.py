@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from .models import University, Department, AcademicYear, Course, Division, Chapter, Topic, SubTopic, Element
+
 # Create your views here.
 
 def academic_year_list(request):
