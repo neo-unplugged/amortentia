@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>{{course}}</title>
+{% endblock %}
+
+{% block page_specific_css %}
+<link rel="stylesheet" href="{% static 'css/chapters_index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+
+    <div class="chapter-title">{{course.name}}</div>
+
+    <!-- context = {
+        "academic_year": academic_year,
+        "course": course,
+        "divisions": divisions,
+        "chapters": chapters,
+    } -->
+
+    {% for division in divisions_and_childs %}
+
+    <h2 class="sub-chapter">({{ division.name }})</h2>
+    <!-- Chapter 1: Introduction to Physics -->
+
+    {% for chapter in division.chapters.all %}
+    {% if chapter.topics.all %}
+    <div class="heading">Chapter {{chapter.id}}: {{chapter.name}}</div>
+    <ul>
+        {% for topic in chapter.topics.all %}
+        <li><a href="{% url 'topic' academic_year course.slug topic.slug %}">Topic {{chapter.id}}.{{topic.id}}:
+                {{topic.name}}</a>
+            <ul>
+                {% for subtopic in topic.sub_topics.all %}
+                <li><a href="{% url 'topic' academic_year course.slug topic.slug %}#{{subtopic.slug}}">Sub-topic
+                        {{chapter.id}}.{{topic.id}}.{{subtopic.id}}:
+                        {{subtopic}}</a>
+                </li>
+
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+
+    {% endfor %}
+
+
+</div>
+{% endblock %}

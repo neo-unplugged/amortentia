@@ -13,7 +13,8 @@ header {
     align-items: center;
     background-color: #333;
     color: white;
-    position: fixed;
+    position: sticky;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -88,23 +89,22 @@ header a {
     text-decoration: underline;
 }
 
+
 /* Main Content Styles */
 .main-content {
     max-width: 800px;
     /* Limit the width */
-    margin: 0 auto;
+    margin: 40px auto;
     /* Center horizontally */
     background-color: white;
-    color: #333;
     /* Add a background to make it pop */
     border-radius: 10px;
     /* Rounded corners for aesthetics */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
-    padding: 80px 20px 40px;
-    /* Add padding-bottom for spacing */
-    /* Combines padding-top, padding-left, and padding-right */
+    padding: 20px 20px 20px;
 }
+
 
 /* Footer Styles */
 footer {
@@ -150,71 +150,6 @@ footer .social-icons a:hover {
     }
 }
 
-@media (max-width: 600px) {
-    .main-content {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+@media (max-width: 600px) {}
 
-    header {
-        padding: 10px;
-    }
-
-    .tags {
-        flex-direction: column;
-    }
-
-    .chapter-title {
-        font-size: 1.5em;
-    }
-
-    .heading {
-        font-size: 1.2em;
-    }
-
-    .content-top {
-        font-size: 1em;
-    }
-
-    .figure {
-        width: 100%;
-        float: none;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    .main-content {
-        padding-top: 120px;
-    }
-
-    .tags {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .chapter-title {
-        font-size: 1.5em;
-    }
-
-    .heading {
-        font-size: 1.2em;
-    }
-
-    .content-top {
-        font-size: 1em;
-    }
-
-    .figure {
-        max-width: 100%;
-        /* Allow the figure to expand fully on small screens */
-        margin-right: 0;
-        /* Remove the right margin */
-        margin-bottom: 20px;
-        /* Ensure there's enough space below */
-    }
-}
+@media (max-width: 768px) {}

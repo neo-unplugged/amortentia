@@ -20,8 +20,8 @@ from django.urls import path, include
 import academia
 
 urlpatterns = [
-    path('', include('academia.urls')),
     path('admin/', admin.site.urls),
+    path('', include('academia.urls')),
 ]
 
 if settings.DEBUG:

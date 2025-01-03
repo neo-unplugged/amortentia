@@ -1,28 +1,10 @@
-/* Main Content Styles */
-.main-content {
-    max-width: 800px;
-    /* Limit the width */
-    margin: 0 auto;
-    /* Center horizontally */
-    background-color: white;
-    /* Add a background to make it pop */
-    border-radius: 10px;
-    /* Rounded corners for aesthetics */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-    padding: 80px 20px 40px;
-    /* Add padding-bottom for spacing */
-    /* Combines padding-top, padding-left, and padding-right */
-}
-
 /* Chapter Titles and Headings */
 .chapter-title,
-.heading {
+.heading,
+.sub-chapter {
     font-weight: bold;
     color: #333;
     /* Dark color for contrast */
-    margin-top: 20px;
-    /* Add spacing */
 }
 
 /* Specific styles for chapter titles */
@@ -31,9 +13,17 @@
     /* Larger font size for chapter titles */
 }
 
+
+.sub-chapter {
+    font-size: 1.6em;
+    /* Smaller font size specifically for headings */
+    margin-top: 10px;
+    /* Adjusted spacing for headings */
+}
+
 /* Specific styles for headings */
 .heading {
-    font-size: 1.5em;
+    font-size: 1.4em;
     /* Smaller font size specifically for headings */
     margin-top: 10px;
     /* Adjusted spacing for headings */

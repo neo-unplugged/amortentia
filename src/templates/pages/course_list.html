@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{academic_year}} year - Courses</title>
+{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <ul>
+        {% for course in courses %}
+        <li><a href="{% url 'chapters' academic_year course.slug %}">{{ course }}</a></li>
+        {% empty %}
+        <p>No courses available.</p>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

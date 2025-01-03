@@ -18,12 +18,6 @@
     text-decoration: underline;
 }
 
-/* Main Content Styles */
-.main-content {
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 /* Chapter Titles and Headings */
 .chapter-title {
@@ -152,8 +146,6 @@
     margin-top: 20px;
     display: flex;
     gap: 15px;
-
-    margin-bottom: 40px;
 }
 
 .tag {

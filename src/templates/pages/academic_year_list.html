@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{dept.name}} - Academic Year</title>
+{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <ul>
+        {% for academic_year in academic_years %}
+        <li><a href="{{academic_year}}">{{ academic_year }}</a></li>
+        {% empty %}
+        <p>No academic years available.</p>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}
